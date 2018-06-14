@@ -245,6 +245,12 @@ public class PasswordInputEdt extends android.support.v7.widget.AppCompatEditTex
 
     }
 
+
+    public void clear(){
+        this.text = "";
+        invalidate();
+    }
+
     private void init() {
 
         rectPaint = new Paint();

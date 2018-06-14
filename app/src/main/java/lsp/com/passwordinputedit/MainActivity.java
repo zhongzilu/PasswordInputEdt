@@ -2,6 +2,7 @@ package lsp.com.passwordinputedit;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import lsp.com.lib.PasswordInputEdt;
@@ -21,6 +22,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onInputOver(String text) {
                 Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        findViewById(R.id.mClearBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                edt.clear();
             }
         });
 
